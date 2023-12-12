@@ -33,6 +33,14 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCart();
   }
 
+  // Delete item from cart
+  function deleteItemFromCart(index) {
+    cartItems.splice(index, 1);
+    cartCount -= 1;
+    updateCartCount();
+    updateCart();
+  }
+
   // Cart Content
   function updateCart() {
     cartItemsList.innerHTML = "";
@@ -93,6 +101,16 @@ document.addEventListener("DOMContentLoaded", function () {
       cartItemsList.appendChild(section);
 
       cartTotal += item.price * item.quantity;
+
+      // Delete button
+      const deleteButton = document.createElement("i");
+      deleteButton.className = "fa-solid fa-trash cart-item-delete";
+
+      deleteButton.classList.add("cart-item-delete");
+      deleteButton.addEventListener("click", function () {
+        deleteItemFromCart(index);
+      });
+      section.appendChild(deleteButton);
     });
 
     cartTotalElement.innerHTML = "";
