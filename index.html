@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/img/logo.png">
+
+    <title>Ecommerce Website - Erika Jane Reyes</title>
+
+    <!-- Link TO CSS Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/6c7e74a239.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  </head>
+  <body>
+
+    <!-- Navigation Bar -->
+    <header>
+      <!-- Logo -->
+      <a
+        href="index.html"
+        class="logo"
+      >
+        <img src="img/logo.png" />
+        <p>Furniro</p>
+      </a>
+
+
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#products">Products</a></li>
+      </ul>
+
+    
+      <div class="options">
+        <i
+          class="fa-solid fa-cart-shopping"
+          ><span id="cart-count">0</span></i
+        >
+        <!-- Search Box -->
+        <input
+          type="search"
+          name=""
+          id=""
+          placeholder="Search Here..."
+          class="search"
+        />
+
+        <i
+          class="fa-solid fa-magnifying-glass"
+          id="search-icon"
+         
+        ></i>
+
+
+        <a href="#" class="login_btn">Login</a>
+
+        </a>
+        <a href="#" class="register_btn">Register</a>
+
+        </a>
+      </div>
+
+        <!-- Menu-Icon -->
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+
+      <div
+        id="cart-container"
+        class="cart-container"
+      >
+        <h1 class="cart-container-title">My Shopping Cart</h1>
+        <ul
+          id="cart-items-list"
+          class="cart-items-list"
+        ></ul>
+        <p id="cart-total" class="cart-total">Total: ₱0.00</p>
+
+        <button class="close-cart">Close</button>
+      </div>
+      
+      
+    </header>
+
+
+    <!-- Login Modal -->
+    <div
+      id="loginModal"
+      class="modal"
+    >
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Log In</p>
+        <form id="loginForm">
+          <!-- Login form fields -->
+          <input
+            type="text"
+            placeholder="Username"
+            required
+            class="input-field"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            class="input-field"
+          />
+            <label>
+              <input type="checkbox" />
+              <p>Remember me</p></label>
+          <button type="submit" class="form-button">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div
+      id="registerModal"
+      class="modal"
+    >
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Register</p>
+        <form id="registerForm">
+          <!-- Registration form fields -->
+          <input
+            type="text"
+            placeholder="Name"
+            required
+            class="input-field"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            class="input-field"
+          />
+          <input
+            type="number"
+            placeholder="Contact No."
+            required
+            class="input-field"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            class="input-field"
+          />
+          <label>
+            <input type="checkbox" />
+            <p>I agree to the <span>Terms and Conditions</span> and <span>Privacy Policy</span></p>
+          </label>
+
+          <button type="submit" class="form-button">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Home -->
+    <section
+      class="home"
+      id="home"
+    >
+      <div class="home-text">
+        <div class="content">
+          <p>New Arrival</p>
+          <h1>Discover our new collection</h1>
+          <p>
+            Discover comfort and style at your fingertips with our diverse furniture collection!
+          </p>
+        </div>
+        <a
+          href="#products"
+          class="buy-btn"
+          >Buy Now</a
+        >
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+      <h1 class="section-title">Popular Categories</h1>
+
+      <div class="categories-container">
+        <div class="category-item">
+          <img src="img/item.png" />
+          <p>Dining</p>
+        </div>
+  
+        <div class="category-item">
+          <img src="img/item2.png" />
+          <p>Living</p>
+        </div>
+  
+        <div class="category-item">
+          <img src="img/item3.png" />
+          <p>Bedroom</p>
+        </div>
+      </div>
+
+     
+    </section>
+
+    <!-- Products -->
+    <section
+      class="products"
+      id="products"
+    >
+
+      <h1 class="section-title">Our Products</h1>
+
+      <!-- Product Container -->
+      <div class="products-container">
+        <div class="product-item">
+          <img
+            src="img/product1.png"
+            alt=""
+            class="product-image"
+          />
+          <div class="product-content">
+            <div class="product-info">
+              <h2 class="product-name">Syltherine</h2>
+              <button class="add-button">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <p class="product-description">Stylish table set</p>
+            <p class="product-price-peso">₱<span class="product-price">6,789</span></p>          </div>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="img/product2.png"
+            alt=""
+            class="product-image"
+          />
+          <div class="product-content">
+            <div class="product-info">
+              <h2 class="product-name">Leviosa</h2>
+              <button class="add-button">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <p class="product-description">Stylish cafe chair</p>
+            <p class="product-price-peso">₱<span class="product-price">2,345</span></p>          </div>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="img/product3.png"
+            alt=""
+            class="product-image"
+          />
+          <div class="product-content">
+            <div class="product-info">
+              <h2 class="product-name">Lolito</h2>
+              <button class="add-button">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <p class="product-description">Luxury big sofa</p>
+            <p class="product-price-peso">₱<span class="product-price">3,456</span></p>
+          </div>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="img/product4.png"
+            alt=""
+            class="product-image"
+          />
+          <div class="product-content">
+            <div class="product-info">
+              <h2 class="product-name">Respira</h2>
+              <button class="add-button">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <p class="product-description">Outdoor bar table</p>
+            <p class="product-price-peso">₱<span class="product-price">7,891</span></p>          </div>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="img/product5.png"
+            alt=""
+            class="product-image"
+          />
+          <div class="product-content">
+            <div class="product-info">
+              <h2 class="product-name">Griffo</h2>
+              <button class="add-button">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <p class="product-description">Night lamp</p>
+            <p class="product-price-peso">₱<span class="product-price">9,987</span></p>          </div>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="img/product6.png"
+            alt=""
+            class="product-image"
+          />
+          <div class="product-content">
+            <div class="product-info">
+              <h2 class="product-name">Muggo</h2>
+              <button class="add-button">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <p class="product-description">Living room set</p>
+            <p class="product-price-peso">₱<span class="product-price">7,567</span></p>          </div>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="img/product7.png"
+            alt=""
+            class="product-image"
+          />
+          <div class="product-content">
+            <div class="product-info">
+              <h2 class="product-name">Pingky</h2>
+              <button class="add-button">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <p class="product-description">Modern sofa set</p>
+            <p class="product-price-peso">₱<span class="product-price">2,2456</span></p>          </div>
+        </div>
+
+        <div class="product-item">
+          <img
+            src="img/product8.png"
+            alt=""
+            class="product-image"
+          />
+          <div class="product-content">
+            <div class="product-info">
+              <h2 class="product-name">Potty</h2>
+              <button class="add-button">
+                <i class="fa-solid fa-cart-plus"></i>
+              </button>
+            </div>
+            <p class="product-description">Retro sofa</p>
+            <p class="product-price-peso">₱<span class="product-price">11,1230</span></p>          </div>
+        </div>
+      </div>
+
+ 
+    </section>
+
+    <footer>
+
+      <!-- Footer Links -->
+      <section class="footer">
+        <div class="company">
+          <img src="img/logo.png" class="footer-logo"/>
+          <h3>Furniro</h3>
+          <p>Welcome to our furniture store — your home for elegant designs and comfortable living. Discover pieces that turn your space into a sanctuary and bring joy to every room.
+          </p>
+        </div>
+
+        <div class="links">
+          <p>Links</p>
+          <ul><li>Home</li><li>Categories</li><li>Products</li></ul>
+        </div>
+
+        <div class="links">
+          <p>Contact Us</p>
+          <ul><li>Contact No.: 0912345678</li><li>Address: Cornelia Street</li><li>Email: <a href="mailto:furniro@gmail.com">furniro@gmail.com</a></li></ul>
+        </div>
+
+        <div class="links">
+          <p>Subscribe to our newsletter</p>
+          <input type="text" style="border: 1px solid var(--color-primary);"/>
+        </div>
+      </section>
+      
+     
+    </footer>
+
+    <!-- Custom Popup -->
+<div id="customPopup" class="modal" style="display: none;">
+  <div class="modal-content" ">
+    <span class="custom-popup-close">&times;</span>
+    <p id="customPopupMessage" style="display: flex; flex-direction: column;">Some message</p>
+  </div>
+</div>
+
+
+    <!-- Link To JS -->
+    <script src="main.js"></script>
+
+  </body>
+
+</html>
